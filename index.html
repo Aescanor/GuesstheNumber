@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Guess the number !</title>
 </head>
+
 <body>
-    
-<form class="guess-container">
 
-    <label for="guessNumber">Trouvez le bon nombre compris entre 0 et 10</label>
-    <input type="text" id="guessNumber" name="guessNumber" placeholder="entrez un nombre 1 et 10" minlength="1" maxlength="2" >
-    <p class="text-info"></p>
-    <p class="text-indication"></p>
-    <p class="compteur"></p>
-    <button type="button">Valider</button>
+    <form class="guess-container">
 
-</form>
+        
+        <label for="guessNumber">Trouvez le bon nombre compris entre 0 et 10</label>
+        <input type="text" id="guessNumber" name="guessNumber" autofocus placeholder="entrez un nombre 1 et 10"
+        minlength="1" maxlength="2">
+        <p class="text-info"></p>
+        <p class="text-indication"></p>
+        <button type="button">Valider</button>
+        
+        <div class="block-counter">
+            <p class="compteur ">Il vous reste : 10 tentatives</p>
+            <p class="compteur true">Vous avez : 10 bonnes réponses</p>
+            <p class="compteur false">Vous avez : 3 mauvaises réponses</p>
+        </div>
+    </form>
 
 
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>

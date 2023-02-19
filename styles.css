@@ -1,0 +1,89 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    background: linear-gradient(to bottom, blue 75%, white);
+    font-size: 16px;
+    font-weight: 700;
+    color: antiquewhite;
+}
+
+.guess-container {
+    flex-shrink: 0;
+    width: 60%;
+    height: 400px;
+    margin: 125px auto;
+    background: black;
+    border: 2px solid antiquewhite;
+    border-radius: 3px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-counter{
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+label {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+#guessNumber {
+    width: auto;
+    padding: 12px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.text-info {
+    font-style: italic;
+    font-weight: 800;
+}
+
+.text-indication {
+    margin:15px 0;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.compteur {
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: orange;
+}
+
+.true{
+    color: green;
+}
+
+.false{
+    color: red;
+}
+
+button{
+    width: 100px;
+    margin:15px 0;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-style: 800;
+    
+
+}
