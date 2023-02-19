@@ -46,17 +46,21 @@ form.addEventListener("click", function (e) {
     // 3.a-Contrôle de la proposition utilisateur == random 
 
     // initialisation du nbr de tentatives:
-
     let counter = 10;
+
+    // compteur true / false :
     let counterTrue = 0;
     let counterFalse = 0;
+
+    // compteur discount :
+    let discounter = (counter - counterTrue - counterFalse)
 
     if (guessUser == randomNumber) {
         indication.textContent = "Bravo, vous avez trouvé le bon nombre!";
         indication.style.color = "green"
         counterTrue++;
         compteurTrue.textContent = `Vous avez ${counterTrue} bonnes réponses`
-        counter = `${compteurTrue} - ${compteurFalse} - ${compteur}`
+        discounter = `${compteurTrue} - ${compteurFalse} - ${compteur}`
         compteur.textContent = `Il vous reste ${counter} tentative(s)`
 
 
@@ -64,13 +68,17 @@ form.addEventListener("click", function (e) {
         indication.textContent = "Non, c'est moins!";
         indication.style.color = "red";
         counterFalse++;
-        compteurFalse.textContent = `Vous avez ${counterFalse} de mauvaise(s )réponses`
+        compteurFalse.textContent = `Vous avez ${counterFalse} mauvaise(s) réponses`
+        discounter = `${compteurTrue} - ${compteurFalse} - ${compteur}`
+        compteur.textContent = `Il vous reste ${counter} tentative(s)`
 
     } else if (guessUser < randomNumber) {
         indication.textContent = "Non, c'est +"
         indication.style.color = "red";
         counterFalse++;
-        compteurFalse.textContent = `Vous avez ${counterFalse} de mauvaise(s) réponses`
+        compteurFalse.textContent = `Vous avez ${counterFalse} mauvaise(s) réponses`
+        discounter = `${compteurTrue} - ${compteurFalse} - ${compteur}`
+        compteur.textContent = `Il vous reste ${counter} tentative(s)`
 
     } else {
         indication.textContent = ""

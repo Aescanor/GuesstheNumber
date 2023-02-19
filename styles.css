@@ -52,8 +52,11 @@ label {
 }
 
 .text-info {
+    margin-top: 12px;
+    font-size: 1.1rem;
     font-style: italic;
     font-weight: 800;
+    color: red;
 }
 
 .text-indication {

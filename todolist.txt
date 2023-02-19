@@ -4,6 +4,7 @@
 Le click dans l'input compte pour une valeur 
 
 implanter une fonction compteur : 
->1er cas de figure: une fois la bonne réponse trouvée, le script est bloqué!
->2nd cas de figure: laisse x tentatives, une fois le nbr de tentatives échues le script bloque! 
+10 tenatives avec décompte des bonnes et mauvaises réponses.
+Dès lors que les tentatives ont été utilisées, le jeux prend fin.
 
+19/02/2023 Revoir la logique du décompte, car s'affiche à la première mais pas de refresh 
