@@ -1,0 +1,8 @@
+
+À corriger : 
+
+Le click dans l'input compte pour une valeur 
+
+implanter une fonction compteur : 
+>1er cas de figure: une fois la bonne réponse trouvée, le script est bloqué!
+>2nd cas de figure: laisse x tentatives, une fois le nbr de tentatives échues le script bloque! 
