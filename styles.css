@@ -11,7 +11,7 @@ body {
     width: 100vw;
     height: 100vh;
     min-height: 100%;
-    background: linear-gradient(to bottom, blue 75%, white);
+    background: linear-gradient(to bottom, blue, white);
     font-size: 16px;
     font-weight: 700;
     color: antiquewhite;
@@ -44,10 +44,10 @@ label {
 }
 
 #guessNumber {
-    width: auto;
+    width: 300px;
     padding: 12px;
     border-radius: 3px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
 }
 

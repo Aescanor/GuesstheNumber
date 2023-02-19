@@ -12,10 +12,11 @@ const button = document.querySelector("button");
 
 // 2 - gestion du comportement :
 
-form.addEventListener("click", function(e) {
+form.addEventListener("click", function (e) {
     e.preventDefault()
 
     // 3-Contrôle de l'input : 
+    inputNumber.focus();
 
     // regex de l'input:
     let guessUser = inputNumber.value;
@@ -44,15 +45,33 @@ form.addEventListener("click", function(e) {
 
     // 3.a-Contrôle de la proposition utilisateur == random 
 
+    // initialisation du nbr de tentatives:
+
+    let counter = 10;
+    let counterTrue = 0;
+    let counterFalse = 0;
+
     if (guessUser == randomNumber) {
         indication.textContent = "Bravo, vous avez trouvé le bon nombre!";
         indication.style.color = "green"
+        counterTrue++;
+        compteurTrue.textContent = `Vous avez ${counterTrue} bonnes réponses`
+        counter = `${compteurTrue} - ${compteurFalse} - ${compteur}`
+        compteur.textContent = `Il vous reste ${counter} tentative(s)`
+
+
     } else if (guessUser > randomNumber) {
         indication.textContent = "Non, c'est moins!";
         indication.style.color = "red";
+        counterFalse++;
+        compteurFalse.textContent = `Vous avez ${counterFalse} de mauvaise(s )réponses`
+
     } else if (guessUser < randomNumber) {
         indication.textContent = "Non, c'est +"
         indication.style.color = "red";
+        counterFalse++;
+        compteurFalse.textContent = `Vous avez ${counterFalse} de mauvaise(s) réponses`
+
     } else {
         indication.textContent = ""
     }
@@ -61,25 +80,6 @@ form.addEventListener("click", function(e) {
 
     //    10 tentatives, une fois les tentatives utilisées on bloque l'input, 
     //    ou dès que la réponse est bonne, on bloque le script 
-
-    
-    // initialisation du nbr de tentatives:
-
-//     let counter = 10;
-//     let counterTrue = 0;
-//     let counterFalse = 0;
-
-
-//     function guessCounter(guess){
-//     for(let i = 0; i < counter; i++){
-//         console.log(`LA valeur de i : ${i}`);
-//     }
-
-// }
-
-
-
-    
 
 })
 
